@@ -1,0 +1,122 @@
+:root {
+    --primary-color: rgb(247, 177, 27);
+    --secondary-color: gainsboro;
+    --highlight-color: skyblue;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-top: 2em;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin: auto;
+    padding: 1em;
+    max-width: 90%; /* Added flexibility */
+}
+
+form {
+    background-color: white;
+    max-width: 100%; /* Responsive width */
+    padding: 1em;
+    margin: 1em auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Login-button {
+    font-size: 1rem;
+    margin: 1em;
+}
+
+.button-login {
+    padding: 0.5em;
+}
+
+.button-login a {
+    text-decoration: none;
+    padding: 0.4em 3em;
+    color: black;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    font-size: 1rem;
+}
+
+.button-login a:active,
+.button-login a:hover {
+    background-color: var(--primary-color);
+}
+
+.sub-content {
+    padding: 1em;
+}
+
+.form-mail,
+.form-password {
+    padding: 0.4em 2em;
+    border-radius: 2px;
+    background: var(--highlight-color);
+    border: 2px solid var(--highlight-color);
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5em 0;
+}
+
+.Pass-otp a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.6em;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.Pass-otp a:active {
+    background-color: var(--primary-color);
+}
+
+.forget-pass {
+    text-align: right;
+    margin-right: 1em;
+    font-size: 0.8rem;
+}
+
+#button {
+    padding: 0.8em 2em;
+    background-color: var(--primary-color);
+    border: none;
+    width: 100%; /* Responsive width */
+    font-size: 1rem;
+    margin: 1em 0;
+}
+
+/* Media Queries */
+@media (min-width: 320px) and (max-width: 768px) {
+    .container, form {
+        max-width: 95%; /* Adjusted for mobile */
+    }
+    #button {
+        padding: 0.8em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #button {
+        margin: 1em auto;
+        max-width: 80%; /* Slightly narrower for tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    form {
+        max-width: 50%; /* For larger screens */
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login page</title>
+</head>
+<body>
+    <div class="container">
+        <h3>WELCOME</h3>
+        <form action="submit">
+
+            <div class="Login-button">
+                <div class="button-login">
+                    <a href="#" id="loggedIn"> Log In </a>
+                    <a href="#" id="signedUp"> Sign Up </a>
+                </div>
+            </div>
+            
+            <input class="form-mail" type="text" placeholder="Email Address *">
+
+            <div class="sub-content">
+                    <div class="Pass-otp">
+                        <a id="myPassword" href="#"> Password </a>
+                        <a id="myOtp" href="#"> OTP </a>  
+                        
+                        <input class="form-password" type="password" id="myInput" placeholder="Password *">
+                    </div>
+                
+            </div>
+
+            <span class="forget-pass"><a id="myMsg" href="#">Forget Your Password ?</a></span>
+
+            <div>
+                <button id="button" type="submit">Login</button>
+            </div>
+        </form>
+
+        
+    </div>
+
+
+    
+</body>
+
+<script>
+
+ 
+ const log = document.getElementById("loggedIn") 
+ const sign = document.getElementById("signedUp")
+ const Register = document.getElementById("button")
+ const inputField = document.getElementById("myInput");
+ const buttonOtp = document.getElementById("myOtp");
+ const buttonPass = document.getElementById("myPassword")
+ const getOtp = document.getElementById("myMsg")
+
+ buttonOtp.addEventListener("click",() =>{
+   inputField.placeholder = "OTP *";
+   Register.textContent = "Register"
+   getOtp.textContent = "Get OTP?"
+
+ })
+
+ buttonPass.addEventListener("click" , () => {
+    inputField.placeholder = "Password *";
+    Register.textContent = "Login"
+    getOtp.textContent = "Forget Your Password ?"
+ })
+
+ sign.addEventListener("click",() =>{
+   inputField.placeholder = "OTP *";
+   Register.textContent = "Register"
+   getOtp.textContent = "Get OTP?"
+
+ })
+
+ log.addEventListener("click" , () => {
+    inputField.placeholder = "Password *";
+    Register.textContent = "Login"
+    getOtp.textContent = "Forget Your Password ?"
+ })
+
+
+ 
+
+
+
+
+</script>
+</html>
