@@ -5,6 +5,19 @@
     font-size: 16px;
 }
 
+/* Scale font size down for smaller screens */
+@media (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        font-size: 13px;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,12 +33,12 @@ body {
     text-align: center;
     margin: auto;
     padding: 1em;
-    max-width: 90%; /* Added flexibility */
+    max-width: 90%;
 }
 
 form {
     background-color: white;
-    max-width: 100%; /* Responsive width */
+    max-width: 100%;
     padding: 1em;
     margin: 1em auto;
     border-radius: 8px;
@@ -43,7 +56,7 @@ form {
 
 .button-login a {
     text-decoration: none;
-    padding: 0.4em 3em;
+    padding: 0.4em 2em;
     color: black;
     background-color: var(--secondary-color);
     border-radius: 2px;
@@ -61,7 +74,7 @@ form {
 
 .form-mail,
 .form-password {
-    padding: 0.4em 2em;
+    padding: 0.4em 1.5em;
     border-radius: 2px;
     background: var(--highlight-color);
     border: 2px solid var(--highlight-color);
@@ -90,33 +103,40 @@ form {
 }
 
 #button {
-    padding: 0.8em 2em;
+    padding: 0.8em;
     background-color: var(--primary-color);
     border: none;
-    width: 100%; /* Responsive width */
+    width: 100%;
     font-size: 1rem;
     margin: 1em 0;
 }
 
 /* Media Queries */
-@media (min-width: 320px) and (max-width: 768px) {
+@media (max-width: 768px) {
     .container, form {
-        max-width: 95%; /* Adjusted for mobile */
+        max-width: 95%;
     }
     #button {
         padding: 0.8em;
+        font-size: 0.9rem;
+    }
+    .button-login a {
+        padding: 0.4em 1.5em;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     #button {
         margin: 1em auto;
-        max-width: 80%; /* Slightly narrower for tablets */
+        max-width: 80%;
+    }
+    form {
+        max-width: 80%;
     }
 }
 
 @media (min-width: 1024px) {
     form {
-        max-width: 50%; /* For larger screens */
+        max-width: 50%;
     }
 }
